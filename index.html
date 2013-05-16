@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Git and Source Control at Ai</title>
+        <title>Jira Process and Etiquette</title>
 
         <meta name="description" content="Jira All The Things">
         <meta name="author" content="Tim Broder">
@@ -35,6 +35,153 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
+                    <h1>Jira Process <br>and Etiquette</h1>
+                    <img src="img/jira_all_the_things.jpg" alt="Save All The Things!">
+                </section>
+                <section>
+                    <h1>We will cover:</h1>
+                    <ul>
+                        <li>Creating a Jira</li>
+                        <li>Workflow</li>
+                        <li>Etiquette</li>
+                        <li>Tools</li>
+                        <li>Things that don't fit into the above</li>
+                        <li>Questions</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h1>Creating a Jira</h1>
+                        <img src="img/it_lives.png" alt="process">
+                    </section>
+                    <section>
+                        <img src="img/create1.png">
+                    </section>
+                    <section>
+                        <img src="img/create2.png">
+                        <p><a href="http://screencast.com/t/wRWboZwn4JC">http://screencast.com/t/wRWboZwn4JC</a>
+                    </section>
+                  <section>
+                        <h2>Project</h2>
+                        <ul>
+                            <li>Make sure you are on the correct project</li>
+                            <li>These line up with Harvest codes</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Issue Type</h2>
+                        <ul>
+                            <li class="fragment roll-in">Bug: Something is broken</li>
+                            <li class="fragment roll-in">New Feature: A new Feature that has to be implemented</li>
+                            <li class="fragment roll-in">Task: An action has to be taken (clear the cache, update a server setting, research)</li>
+                            <li class="fragment roll-in">Trouble Ticket: An issue that IT has to look into</li>
+                            <li class="fragment roll-in">Site Creation: Used to ask IT to create a QA/Stage intance</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Summary</h2>
+                        <ul>
+                            <li>[High level section] :: [A little more detail]</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Priority</h2>
+                        <ul>
+                            <li class="fragment roll-in">
+                                Immediate
+                                <ul>
+                                    <li>New Work: This ticket is blocking another person from completing their task.  The priority should change as it goes between people</li>
+                                    <li>Retainer: This ticket is an S1 and is going out in an emergency push in the next 48 hours.  This is determined by the PM and TL.</li>
+                                </ul>
+                            </li class="fragment roll-in">
+                            <li class="fragment roll-in">Urgent: An S2 or work that should be completed at the begining of a sprint</li>
+                            <li class="fragment roll-in">High: An S3</li>
+                            <li class="fragment roll-in">Normal: Other Work</li>
+                            <li class="fragment roll-in">Low: Work that should wait until everything else is done. Usually ok to get bumped back to a later release</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Due Date</h2>
+                        <ul>
+                            <li>Optional: Project specific</li>
+                            <li>If used, represents when the design or development task should be completed by</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Components</h2>
+                        <ul>
+                            <li>The feature that the ticket represents</li>
+                            <li>Guide, News Article, Blog Post</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Fix Version</h2>
+                        <ul>
+                            <li>The release the ticket is going live in</li>
+                            <li>Set up by Tech Lead</li>
+                        </ul>
+                        <img src="img/create3.png">
+                    </section>
+                    <section>
+                        <h2>People</h2>
+                        <ul>
+                            <li>Assignee: The resource that should be working on the ticket</li>
+                            <li>Reporter: The person who created the ticket</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Environment</h2>
+                        <ul>
+                            <li>Where the issue is taking place</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Description</h2>
+                        <ul>
+                            <li>A clear discription of the issue</li>
+                            <li>Should include a Jing screenshot of the issue: <a href="http://screencast.com/t/wRWboZwn4JC">http://screencast.com/t/wRWboZwn4JC</a></li>
+                            <li>Assume the resource working on the ticket has never seen the page before</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Steps to Reproduce</h2>
+                        <ul>
+                            <li>Every step taken to get to the issue</li>
+                            <li>Should invlude the full url to the issue</li>
+                            <li>Any actions taken outside the page should be included (admin, clicked a link)</li>
+                            <li>
+                                Example:
+                                <ul>
+                                    <li>Load Homepage https://internetretailer.qa.aistg.com/</li>
+                                    <li>Scroll down to Guide widget</li>
+                                    <li>Scroll the Guide widget to the right</li>
+                                    <li>See missing image</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Labels (Tags)</h2>
+                        <ul>
+                            <li>Can represent a page with many features: Homepage</li>
+                            <li>Can represent cross-site functionality: Pricing, Ads</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Workflow</h1>
+                        <p>Or, the life of a Jira</p>
+                        <img src="img/complex-process.gif" alt="process">
+                    </section>
+                    <section>
+                        <h1>Lifecycle complete</h1>
+                        <img src="img/tumblr_m0345a7X3P1rozvrko1_500.gif" alt="butterfly">
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Seriously, ALL THE THINGS</h2>
                 </section>
             </div>
 
