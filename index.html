@@ -82,6 +82,7 @@
                         <h2>Summary</h2>
                         <ul>
                             <li>[High level section] :: [A little more detail]</li>
+                            <li>Guides :: Homepage Guides tout missing image</li>
                         </ul>
                     </section>
                     <section>
@@ -119,13 +120,17 @@
                         <ul>
                             <li>The release the ticket is going live in</li>
                             <li>Set up by Tech Lead</li>
+                            <li>Should be blank at ticket creation. TL will triage later</li>
+                            <li>After triage, every ticket should be in an release or in the backlog. The backlog is "We'll do it later"</li>
                         </ul>
                         <img src="img/create3.png">
                     </section>
                     <section>
                         <h2>People</h2>
                         <ul>
-                            <li>Assignee: The resource that should be working on the ticket</li>
+                            <li>Assignee: The resource that should be working on the ticket
+                                <br>
+                                Should be unassigned at ticket creation. TL will triage later</li>
                             <li>Reporter: The person who created the ticket</li>
                         </ul>
                     </section>
@@ -175,13 +180,194 @@
                         <img src="img/complex-process.gif" alt="process">
                     </section>
                     <section>
+                        <img src="img/JiraWorkflow.png" alt="process">
+                    </section>
+                    <section>
+                        <h2>A ticket is created</h2>
+                        <ul>
+                            <li>By: QA, TL, PM</li>
+                            <li>If you are going to create a ticket, please put all the required information. Don't just paste a 2 sentence blurb from the client.</li>
+                            <li>Ticket Status is now planned</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Planned / Planned for Reopen</h2>
+                        <ul>
+                            <li>This is new(ish)</li>
+                            <li>
+                                This is the inbox for TL traige:
+                                <ul>
+                                    <li>(Re)Opens</li>
+                                    <li>Assigns</li>
+                                    <li>Schedules</li>
+                                    <li>Knows</li>
+                                </ul>
+                            </li>
+                            <li>If needed, TL can deligate triage to QA</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Open / Reopened</h2>
+                        <ul>
+                            <li>This is the work queue for a resource</li>
+                            <li>Resource clicks "Start Work". This indicates the ticket is "In Progress" and is currently being worked on.</li>
+                            <li>TL / QA clicks "Whoops". They didn't mean to create the ticket. The ticket is now closed</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>In progress</h2>
+                        <ul>
+                            <li>A resource is currently working on this ticket</li>
+                            <li>
+                                When work is completed:
+                                <ul>
+                                    <li>Resource commits code/pushes to source control</li>
+                                    <li>Resource clicks "Finished Work". This changes the status of the ticket to "Ready for QA"</li>
+                                </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Ready for QA</h2>
+                        <ul>
+                            <li>
+                                At the end of the dev cycle for a release:
+                                <ul>
+                                    <li>TL updates QA with the proper release branch</li>
+                                    <li>TL bulk updates Jira's to be "On QA"</li>
+                                </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>On QA</h2>
+                        <ul>
+                            <li>QA tests all tickets on QA</li>
+                            <li>If a ticket passes, QA clicks "Passed on QA". This changes the status of the ticket to "Ready for Stage"</li>
+                            <li>If a ticket fails, QA clicks "Failed on QA. This changes the status of the ticket to "Planned for Reopen".  TL will then triage and determine if the work stays in the current release or gets bumped</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Ready for Stage</h2>
+                        <ul>
+                            <li>
+                                At the end of the QA cycle for a release:
+                                <ul>
+                                    <li>TL merges the release branch into trunk/default/master</li>
+                                    <li>For our branching strategy, click <a href="http://broderboy.github.io/git-presentation/#/7/2">here</a>
+                                    <li>TL updates Stage with this merged code</li>
+                                    <li>Hot deploys to production are now frowned upon</li>
+                                    <li>TL bulk updates Jira's to be "On Stage"</li>
+                                </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>On Stage</h2>
+                        <ul>
+                            <li>QA tests all tickets on Stage</li>
+                            <li>If a ticket passes, QA clicks "Passed on Stage". This changes the status of the ticket to "Ready for Production"</li>
+                            <li>If a ticket fails, QA clicks "Failed on Stage. This changes the status of the ticket to "Planned for Reopen".</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Ready for Production</h2>
+                        <ul>
+                            <li>
+                                Release Time:
+                                <ul>
+                                    <li>Release happens</li>
+                                    <li>TL bulk updates Jira's to be "On Production"</li>
+                                </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>On Production</h2>
+                        <ul>
+                            <li>QA tests all tickets on Production and smoke tests</li>
+                            <li>If a ticket passes, QA clicks "Passed on Production". This changes the status of the ticket to "Verified". QA then closes ticket.</li>
+                            <li>We've tried to remove this extra step. We can't. Maybe in Jira <a href="https://confluence.atlassian.com/display/JIRA/JIRA+6.0+Beta+1+Release+Notes">6.0</a>?</li>
+                            <li>If a ticket fails, QA clicks "Failed on Production" and alerts TL. This changes the status of the ticket to "Planned for Reopen".</li>
+                        </ul>
+                    </section>
+                    <section>
                         <h1>Lifecycle complete</h1>
                         <img src="img/tumblr_m0345a7X3P1rozvrko1_500.gif" alt="butterfly">
                     </section>
                 </section>
 
                 <section>
-                    <h2>Seriously, ALL THE THINGS</h2>
+                    <h1>Seriously, <br> ALL THE THINGS</h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Jira Etiquette</h1>
+                        <img src="img/professional_etiquette_picking_nose.jpg">
+                    </section>
+                    <section>
+                        <h2>Feedback</h2>
+                        <p>A ticket is in my queue, but I have a question or need a file from someone else. What do I do?</p>
+                        <ul>
+                            <li>Assign the ticket</li>
+                            <li>Include a descriptive comment. Make sure to add the name of the person in the comment. This keeps context as a ticket may change multiple hands.</li>
+                            <li>This resource should assign the ticket back to you with an answer</li>
+                            <li>If you've been waiting a bit, follow up: Aim, Email, Breathing heavily behind their desk</li>
+                        </ul>
+                        <img src="img/feedback.png">
+                    </section>
+                    <section>
+                        <h2>Notifications</h2>
+                        <p>Will I always get an email notification? Not always.</p>
+                        <ul>
+                            <li>
+                                If you are not the reporter of a ticket, you will get a notification if:
+                                <ul>
+                                    <li>A ticket is assigned to you</li>
+                                    <li>You are mentioned (@repy) in a ticket</li>
+                                    <li>A ticket is transitioned through the workflow</li>
+                                </ul>
+                            </li>
+                            <li>If you are the reporter of a ticket and want these notifications, be sure to "Watch" the ticket</li>
+                            <li>Why is this? QA/TL generate lots of tickets, which generates massive amount of email, so we turned it off</li>
+                            <li>If you get an email from Jira, chances are it's important, at least glance at it.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Larger Discussion</h2>
+                        <p>What if a ticket requires a wider discussion?</p>
+                        <ul>
+                            <li>
+                                Basecamp baby:
+                                <ul>
+                                    <li>Start a thread</li>
+                                    <li>Include a link to the Jira</li>
+                                    <li>Add a link to the Basecamp thread as a comment in the ticket</li>
+                                </ul>
+                            </li>
+                            <li>Grab the people you need and TALK</li>
+                    </section>
+                    <section>
+                        <h2>Check 'Yo Queues</h2>
+                        <ul>
+                            <li>
+                                Who? <blink><font color="red">EVERYONE</font></blink>
+                                <ul>
+                                    <li>Tech</li>
+                                    <li>Design</li>
+                                    <li>UX</li>
+                                    <li>PM</li>
+                                </ul>
+                            </ul>
+                        <li>Take a pass at least every 24 hours</li>
+                        <li>Know your queue</li>
+                        <li>Get answers to questions back quickly, schedule work time</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>What is API-User?</h2>
+                        <ul>
+                            <li>A ticket that came in from aistage.com (more on this later)</li>
+                            <li>Jenkins: Our automated build tool deployed code that referenced this ticket</li>
+                        </ul>
+                        <img src="img/apiuser.png">
                 </section>
             </div>
 
