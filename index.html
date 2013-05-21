@@ -55,17 +55,17 @@
                         <img src="img/it_lives.png" alt="process">
                     </section>
                     <section>
-                        <img src="img/create1.png">
+                        <img src="img/create1_blur.png">
                     </section>
                     <section>
-                        <img src="img/create2.png">
+                        <img src="img/create2_blur.png">
                         <p><a href="http://screencast.com/t/wRWboZwn4JC">http://screencast.com/t/wRWboZwn4JC</a>
                     </section>
                   <section>
                         <h2>Project</h2>
                         <ul>
                             <li>Make sure you are on the correct project</li>
-                            <li>These line up with Harvest codes</li>
+                            <li>These usually* line up with Harvest codes</li>
                         </ul>
                     </section>
                     <section>
@@ -83,6 +83,8 @@
                         <ul>
                             <li>[High level section] :: [A little more detail]</li>
                             <li>Guides :: Homepage Guides tout missing image</li>
+                            <li>Don't need "bug"</li>
+                            <li>Don't need project name</li>
                         </ul>
                     </section>
                     <section>
@@ -91,12 +93,12 @@
                             <li class="fragment roll-in">
                                 Immediate
                                 <ul>
-                                    <li>New Work: This ticket is blocking another person from completing their task.  The priority should change as it goes between people</li>
-                                    <li>Retainer: This ticket is an S1 and is going out in an emergency push in the next 48 hours.  This is determined by the PM and TL.</li>
+                                    <li>New Work: Major functionality is broken and may be blocking another person from completing their task.</li>
+                                    <li>Retainer: Major functionality is broken and a fix is going out in an emergency push in the next 48 hours.  This is determined by the PM and TL.</li>
                                 </ul>
                             </li class="fragment roll-in">
-                            <li class="fragment roll-in">Urgent: An S2 or work that should be completed at the begining of a sprint</li>
-                            <li class="fragment roll-in">High: An S3</li>
+                            <li class="fragment roll-in">Urgent: Work that should be completed at the begining of a sprint</li>
+                            <li class="fragment roll-in">High: Work that should be hit after Urgent</li>
                             <li class="fragment roll-in">Normal: Other Work</li>
                             <li class="fragment roll-in">Low: Work that should wait until everything else is done. Usually ok to get bumped back to a later release</li>
                         </ul>
@@ -106,6 +108,15 @@
                         <ul>
                             <li>Optional: Project specific</li>
                             <li>If used, represents when the design or development task should be completed by</li>
+                            <li>
+                                Things that should be completed before the due date:
+                                <ul>
+                                    <li>Questions</li>
+                                    <li>Conversations</li>
+                                    <li>Meetings</li>
+                                    <li>Client Agreements</li>
+                                    <li>All of your work</li>
+                            </li>
                         </ul>
                     </section>
                     <section>
@@ -121,7 +132,7 @@
                             <li>The release that the ticket is going live in</li>
                             <li>Set up by Tech Lead</li>
                             <li>Should be blank at ticket creation. TL will triage later</li>
-                            <li>After triage, every ticket should be in an release or in the backlog. The backlog is "We'll do it later"</li>
+                            <li>After triage, every ticket should be in an release or in the backlog. The backlog is where work is scheduled from and long term priorities are planned.</li>
                         </ul>
                         <img src="img/create3.png">
                     </section>
@@ -131,13 +142,14 @@
                             <li>Assignee: The resource that should be working on the ticket
                                 <br>
                                 Should be unassigned at ticket creation. TL will triage later</li>
-                            <li>Reporter: The person who created the ticket</li>
+                            <li>Reporter: The person who created the ticket (This is done automatically)</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Environment</h2>
                         <ul>
-                            <li>Where the issue is taking place</li>
+                            <li>Where the issue is taking place (QA, Stage, Prod)</li>
+                            <li>Include a URL if it's abnormal (GSB OBP)</li>
                         </ul>
                     </section>
                     <section>
@@ -145,6 +157,7 @@
                         <ul>
                             <li>A clear description of the issue</li>
                             <li>Should include a Jing screenshot of the issue: <a href="http://screencast.com/t/wRWboZwn4JC">http://screencast.com/t/wRWboZwn4JC</a></li>
+                            <li>Screenshot should include URL bar so it’s obvious where user is</li>
                             <li>Assume the resource working on the ticket has never seen the page before</li>
                         </ul>
                     </section>
@@ -171,6 +184,8 @@
                             <li>Can represent a page with many features: Homepage</li>
                             <li>Can represent cross-site functionality: Pricing, Ads</li>
                             <li>release-notes: Use this tag if your ticket has a manual process for the release; schema migration, copy a file, update a config, etc.  The TL will use these tagged tickets in creating the launch checklist</li>
+                            <li>design-qa/ux-qa: Used to group these passes</li>
+                            <li>uat: Used to track all bugs that come in from the client during UAT</li>
                         </ul>
                     </section>
                 </section>
@@ -315,6 +330,15 @@
                         <img src="img/feedback.png">
                     </section>
                     <section>
+                        <h2>Speak Up Early and Often</h2>
+                        <ul>
+                            <li>Skim your bugs at the begining of a sprint</li>
+                            <li>If you have a question, ask early</li>
+                            <li>If you still have questions, ask often</li>
+                            <li>Don't wait until the end of a sprint</li>
+                        </ul>
+                    </section>
+                    <section>
                         <h2>Notifications</h2>
                         <p>Will I always get an email notification? Not always.</p>
                         <ul>
@@ -336,7 +360,7 @@
                         <p>What if a ticket requires a wider discussion?</p>
                         <ul>
                             <li>
-                                Basecamp baby:
+                                Basecamp, baby:
                                 <ul>
                                     <li>Start a thread</li>
                                     <li>Include a link to the Jira</li>
@@ -360,6 +384,7 @@
                             <li>Take a pass at least every 24 hours</li>
                             <li>Know your queue</li>
                             <li>Get answers to questions back quickly, schedule work time</li>
+                            <li>Project Dashboards! (coming up)
                         </ul>
                     </section>
                     <section>
@@ -394,7 +419,7 @@
                             <li>What is the status of the release?</li>
                         </ul>
                     </section>
-                    <section>
+                    <section style="width: 130%; margin-left: -15%">
                         <a href="img/dash1.png"><img src="img/dash1.png"></a>
                         <ol>
                             <li>Jiras by status. The whole project</li>
@@ -403,7 +428,7 @@
                             <li>Planned Statistics: TL keeps an eye on this</li>
                         </ol>
                     </section>
-                    <section>
+                    <section style="width: 130%; margin-left: -15%">
                         <a href="img/dash3.png"><img src="img/dash3.png"></a>
                         <ol>
                             <li>Created VS Resolved</li>
@@ -411,7 +436,7 @@
                             <li>Status by Resource</li>
                         </ol>
                     </section>
-                    <section>
+                    <section style="width: 130%; margin-left: -15%">
                         <a href="img/dash4.png"><img src="img/dash4.png"></a>
                         <ol>
                             <li>Component Breakdown</li>
@@ -437,12 +462,13 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>Issue submittion</h2>
+                        <h2>Issue Submission</h2>
                         <img src="img/stager4.png">
                     </section>
                     <section>
                         <h2>Source Control</h2>
                         <img src="img/git1.png">
+                        <p>The first line of your commit msg should be the Jira Number</p>
                     </section>
                     <section>
                         <h2>Easy jump to Git</h2>
